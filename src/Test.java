@@ -69,6 +69,8 @@ public class Test {
         mq.print();
         System.out.println("\n");
 
+        //--------------------------------------------------------------------------------------------
+
         MyStack<Integer> ms = new MyStack<>();
 
         System.out.println("-----------------MyStack push() test---------------");
@@ -78,19 +80,35 @@ public class Test {
         ms.push(92);
         ms.print();
         System.out.println("-----------------MyStack remove() test---------------");
-        ms.remove(3);
+        ms.remove(2);
         ms.print();
         System.out.println("-----------------MyStack size() test---------------");
         System.out.println(ms.size());
         System.out.println("-----------------MyStack peek() test---------------");
         System.out.println(ms.peek());
-        //System.out.println("-----------------MyStack pop() test---------------");
-        //System.out.println(ms.pop());
-        //System.out.println("\n");
-        //ms.print();
+        System.out.println("-----------------MyStack pop() test---------------");
+        System.out.println(ms.pop());
+        System.out.println("\n");
+        ms.print();
         System.out.println("-----------------MyStack clear() test---------------");
         ms.clear();
         ms.print();
 
+        //----------------------------------------------------------------------------------------
+
+        MyHashMap <Integer, Integer> mhp = new MyHashMap<>();
+        mhp.put(2, 3445);
+        mhp.put(8, 665);
+        mhp.put(142, 5);
+        mhp.put(1, 2);
+        mhp.put(22, 876);
+        mhp.remove(2);
+        mhp.remove(142);
+        System.out.println(mhp.size());
+        System.out.println(mhp.get(22));
+        mhp.clear();
     }
+
+
+
 }

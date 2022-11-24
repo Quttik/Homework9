@@ -26,27 +26,16 @@ public class MyArrayList <T> implements MyCollection<T> {
     }
     @Override
     public void remove(int index) {
-        Object[] array1 = new Object[this.array.length];
-        if (index >= 0 && index <= this.array.length - 1) {
-            if (index > 0 && index < this.array.length - 1) {
-                System.arraycopy(this.array, 0, array1, 0, index);
-                System.arraycopy(this.array, index + 1, array1, index, this.array.length - index - 1);
-                this.array = Arrays.copyOf(array1, array1.length - 1);
-                System.out.println("Element number " + index + " has been removed");
+        Object[] newArray = new Object[this.array.length - 1];
+        int newI = 0;
+        for(int i = 0; i < array.length; i++) {
+            if(i == index) {
+                continue;
             }
-            if (index == 0) {
-                System.arraycopy(this.array, 1, array1, 0, this.array.length - 1);
-                this.array = Arrays.copyOf(array1, array1.length - 1);
-                System.out.println("First element has been removed");
-            }
-            if (index == this.array.length - 1 && index != 0) {
-                System.arraycopy(this.array, 0, array1, 0, index);
-                this.array = Arrays.copyOf(array1, array1.length - 1);
-                System.out.println("Last element has been removed");
-            }
-        }else {
-            System.out.println("Index out of bounds, there are no changes in array");
+            newArray[newI] = array[i];
+            newI++;
         }
+        array = newArray;
     }
     @Override
     public void clear() {

@@ -51,8 +51,10 @@ public class MyLinkedList<T> implements MyCollection<T> {
             for (int i = 1; i < index - 1; i++) {
                 current = current.next;
             }
-            current.prev = current.next;
-            current.next = current.next.next;
+            current.prev.next = current.next;
+            current.next.prev = current.prev;
+            current.next = null;
+            current.prev = null;
         }
 
     }
