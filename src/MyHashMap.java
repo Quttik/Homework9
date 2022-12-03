@@ -16,7 +16,7 @@ public class MyHashMap<K, V> {
     public void put(K key, V value) {
         Bucket bucket = getBucketByKey(key);
         if(bucket.containsKey(key)) {
-            return;
+            bucket.add(new MyEntry<>(key, value));
         }
         bucket.add(new MyEntry<>(key, value));
     }

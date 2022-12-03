@@ -5,9 +5,7 @@ public class Test {
         MyArrayList<Integer> mal = new MyArrayList<>();
         System.out.println("==================MyArrayList Test==================");
         mal.setArray(new Object[]{3, 4, 6574, 445, 786, 2});
-        //MyArrayList add() test
         mal.add(7);
-        System.out.println(Arrays.toString(mal.getArray()));
         //MyArrayList remove() test
         mal.remove(2);
         System.out.println(Arrays.toString(mal.getArray()));
@@ -35,7 +33,6 @@ public class Test {
         mll.add(234);
         mll.add(20);
         mll.add(10);
-        mll.print();
         System.out.println("--------------------MyLinkedList remove() test-------------------");
         mll.remove(2);
         mll.print();
@@ -55,7 +52,6 @@ public class Test {
         mq.add(2);
         mq.add(7);
         mq.add(56);
-        mq.print();
         System.out.println("------------------------MyQueue peek() test-------------------------");
         System.out.println(mq.peek());
         System.out.println("------------------------MyQueue poll() test-------------------------");
@@ -78,7 +74,6 @@ public class Test {
         ms.push(0);
         ms.push(9);
         ms.push(92);
-        ms.print();
         System.out.println("-----------------MyStack remove() test---------------");
         ms.remove(2);
         ms.print();
@@ -100,13 +95,14 @@ public class Test {
         mhp.put(2, 3445);
         mhp.put(8, 665);
         mhp.put(142, 5);
-        mhp.put(1, 2);
+        mhp.put(2, 2);
         mhp.put(22, 876);
         mhp.remove(2);
         mhp.remove(142);
         System.out.println(mhp.size());
-        System.out.println(mhp.get(22));
+        System.out.println(mhp.get(2));
         mhp.clear();
+
     }
 
 
